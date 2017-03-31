@@ -1,0 +1,26 @@
+aside{
+	visibility: hidden;
+	overflow: hidden;
+	width: 0px;
+	height: 0px;
+}
+body{
+	font-family: sans-serif;
+	padding:15px;
+}
+@media print {
+	a:link, a:visited {
+	text-decoration: none;
+	color: black;
+}
+.reseña{
+	padding: 15px;
+	text-align: justify;
+}
+.medio{
+}
+.redes{
+}
+.btn{
+	visibility: hidden;
+}

@@ -1,0 +1,44 @@
+.rellenar{
+	background: #94AC9B;
+	padding: 50px;
+	height: 650px;
+}
+.rellenar2{
+	background: #94AC9B;
+	padding: 50px;*/
+	height: 400px;
+}
+.formularios{
+	
+}
+.busquedas{
+	background: #FFFFFF;
+	color:#ccc;
+	padding: 20px;
+	margin:20px;
+	font-size: 12px;
+}
+.foto{
+	margin-right: 50px;
+	width:;
+	height:;
+}
+.recuadrofoto{
+	width:311px;
+	height:302px;
+}
+.btn-final{
+	background:#e5e3b8;
+	color:#94AC9B;
+}
+.table-striped{
+	background:#e5e3b8;
+	color:#94AC9B;		
+}
+.table th{
+	text-align: center;
+}
+.reseña{
+	padding: 0px;
+	padding-right: 10px;
+}
