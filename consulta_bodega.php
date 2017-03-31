@@ -1,0 +1,174 @@
+<?php
+	require("conexion1.php");
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Prueba Conexion base de datos La Silueta</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="formularios.css" type="text/css">
+</head>
+
+<body>
+	
+	<aside class="visible col-lg-2">
+			<br>
+			<li class="title_sidebar">Bodega</li>
+			<br><br>
+			<ul>
+			<li class=""><a href="bodega.php">Nuevo</a></li>
+			<li class=""><a href="consulta_bodega.php">Consulta</a></li>
+			</ul>
+			<div class="busquedas col-lg-10">
+				<form name="busqueda" method="post" action="datos_consulta_bodega.php" class="" >
+					<div class="form-group">
+						<label for="Nombre del Autor:" class="control-label">Nombre</label><br>
+						<input type="text" class="form-control" name="nombre_bodega" placeholder="Nombre del autor"/>
+					</div>
+					<div class="form-group">	
+						<label for="Apellido" class="control-label">Contacto</label>
+						<input type="text" class="form-control" name="contacto_bodega" placeholder="Apellido"/>
+					</div>
+					<div class="form-group">
+						<label for="Seudonimo" class="control-label">Ciudad</label>
+						<input type="text" name="ciudad_bodega" class="form-control" placeholder="Seudonimo" />
+					</div>
+					<div class="form-group">
+						<label for="Nacionalidad" class="control-label">Barrio</label>
+						<input type="text" name="barrio_bodega" class="form-control" placeholder="Nacionalidad"/>
+					</div>
+					<div class="form-group"><button type="submit" class="btn btn-info ">Consultar</button></div>
+				</for>
+			</div>
+			<br>
+			<ul>
+			<li><a href="autor.php">Salir</a></li>
+			</ul></ul>
+		<img src="img\logo_1.svg" alt="logo_anaquel" class="aside-img col-lg-7 col-lg-offset-1 ">
+	</aside>
+	<header style="">
+	   	<img src="img\logo2.png" alt="logo2" align="right">
+	</header>
+
+	<section>
+	<div class="main col-lg-10">
+		<form name="form" method="post" action="datos_consulta_bodega.php" class="">
+			<div class="form-group rellenar">
+				<div class="col-lg-8">
+					<div class="form-group">	
+						<label for="Nombre del Autor:" class="col-lg-3 control-label">Nombre</label>
+						<div class="col-lg-9"><input type="text" class="form-control" name="nombre_bodega" placeholder="Nombre bodega"/></div>
+					</div><br>
+					<div class="form-group">	
+						<label for="Apellido" class="col-lg-3 control-label">Contacto</label>
+						<div class="col-lg-9"><input type="text" class="form-control" name="contacto_bodega" placeholder="Contacto"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Seudonimo" class="col-lg-3 control-label">Ciudad</label>
+						<div class="col-lg-9"><input type="text" name="ciudad_bodega" class="form-control" placeholder="Ciudad" /></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Nacionalidad" class="col-lg-3 control-label">Barrio</label>
+						<div class="col-lg-9"><input type="text" name="barrio_autor" class="form-control" placeholder="Barrio"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Año" class="col-lg-3 control-label">Año</label>
+						<div class="col-lg-3"><input type="date" name="año_autor" class="form-control" /></div>
+						<label for="Web" class="col-lg-2 control-label">Web</label>
+						<div class="col-lg-4"><input type="text" name="web_autor" class="form-control" placeholder="Pagina Web"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Correo electronico" class="col-lg-3 control-label">Email</label>
+						<div class="col-lg-9"><input type="text" name="email_autor" class="form-control" placeholder="Email"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Direccion" class="col-lg-3 control-label">Direccion</label>
+						<div class="col-lg-9"><input type="text" name="direccion_autor" class="form-control" placeholder="Direccion"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Pais" class="col-lg-3 control-label">Pais</label>
+						<div class="col-lg-3"><select name='pais_autor' class="form-control" placeholder="Pais">
+									<?php
+										$consulta = "SELECT nombre_pais FROM paises ORDER by nombre_pais";
+										$rec=mysql_query($consulta);
+										while($row=mysql_fetch_array($rec))
+										{
+										echo "<option>";
+										echo $row['nombre_pais'];
+										echo "</option>";
+										}
+									?></select>
+						</div>
+						<label for="Ciudad" class="col-lg-2 control-label">Ciudad</label>
+						<div class="col-lg-4"><input type="text" name="ciudad_autor" class="form-control" class="col-lg-2" placeholder="Nacionalidad"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Telefono" class="col-lg-3 control-label">Telefono</label>
+						<div class="col-lg-3"><input type="number" name="telefono_autor" class="form-control" placeholder="Telefono"/></div>
+						<label for="Celular" class="col-lg-2 control-label">Celular</label>
+						<div class="col-lg-4"><input type="number" name="celular" class="form-control" placeholder="Celular"/></div>
+					</div><br>
+				</div>
+				<div class="form-group col-lg-4">
+					<div class="col-lg-offset-3 foto">
+						<table border="1" background="img/foto.png" alt="" class="recuadrofoto">
+						<td><?php
+							    @$result=mysql_query("SELECT * FROM imagen_autor ORDER BY id DESC");
+							    if($result)
+							    {
+							    	//echo "<img src='imagen_mostrar.php?id=".$row["id"]."' width='320' height='310'>";
+							        
+							         while($row=mysql_fetch_array($result))
+							         {
+							        //     echo "<img src='imagen_mostrar.php?id=".$row["id"]."' width='320' height='310'>";
+							             // echo "<img src='imagen_mostrar.php?id=".$row["id"]."' width='".$row["anchura"]."' height='".$row["altura"]."'>";
+							         }
+							    }
+							    ?></td>
+						</table>
+					</div>
+					<div class="form-group">
+						<div class="col-lg-3"><input type="file" name="boton" class="btn btn-lg"></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Ciudad" class="col-lg-5 control-label">Facebook</label>
+						<div class="col-lg-7"><input type="text" name="facebook" class="form-control" placeholder="Facebook"/></div>
+					</div><br>				
+					<div class="form-group">
+						<label for="instagram" class="col-lg-5 control-label">Instagram</label>
+						<div class="col-lg-7"><input type="text" name="instagram" class="form-control" placeholder="Instagram"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="skype" class="col-lg-5 control-label">Skype</label>
+						<div class="col-lg-7"><input type="text" name="skype" class="form-control" placeholder="Skype"/></div>
+					</div><br>
+					<div class="form-group">
+						<label for="Casa" class="col-lg-5 control-label">Twitter</label>
+						<div class="col-lg-7"><input type="text" name="twitter" class="form-control" placeholder="Twitter"/></div>
+					</div><br>
+				</div><br>
+			</div>
+			<div class="rellenar2">
+				<div class="form-group">
+					<label for="reseña" class="col-lg-2 control-label">Reseña</label>
+					<div class="col-lg-10 "><textarea name="reseña_autor" class="form-control" rows="10" placeholder="Escribe una pequeña reseña del libro"></textarea></div>
+				</div>
+				<div class="btn-group col-lg-offset-10 btn-group-md">
+					<button type="submit" class="btn btn-final">Guardar</button>
+					<button type="submit" class="btn btn-final"><a href="#inicio">Imprimir</a></button>
+				</div>
+			</div>
+		</form>
+	</div><!-- fin main -->
+	</section>	
+
+	<footer>
+	</footer>
+</body>
+</html>
+

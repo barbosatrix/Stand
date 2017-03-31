@@ -1,0 +1,42 @@
+@font-face {
+	font-family:NowAltRegular;
+	font-weight:normal;
+	font-style:normal;
+	src: url(fuentes/Now-Regular.otf);   /* requerido */
+ }
+ @font-face {
+	font-family:NowAltRegular;
+	font-weight:normal;
+	font-style:normal;
+	src: url(fuentes/nowregular.ttf);   /* requerido */
+ }
+ @font-face {
+	font-family:NowAltRegular;
+	font-weight:normal;
+	font-style:normal;
+	src: url(fuentes/nowRegular.eot);   /* requerido */
+ }
+.ingreso{
+	background-color:#0D5C62;
+}
+.formulario{
+	background-color:#94AC9B;
+	/*background: #94AC9B;*/
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+	color: #e5e3b8 ;
+}
+.ingreso_boton{
+	/*padding:10px;
+	font-family:NowAltRegular,Arial;
+	font-weight:normal;
+	font-style:normal;
+	font-size:20px;
+	color:#0D5C62;*/
+	background-color:#DCDBB2;
+	color:#0D5C62;
+}
+.head-logo{
+ margin-bottom: 50px;
+}

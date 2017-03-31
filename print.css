@@ -1,0 +1,15 @@
+aside{
+visibility: hidden;
+overflow: hidden;
+width: 0px;
+height: 0px;
+}
+body{
+font-family: sans-serif;
+}
+@media print {
+	a:link, a:visited {
+	text-decoration: none;
+	color: black;
+	}
+}
